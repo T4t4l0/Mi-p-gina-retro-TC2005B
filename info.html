@@ -1,0 +1,76 @@
+<html>
+    <head>
+      
+        <!--Fuente-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+       
+    </head>
+    <style>
+        #pantalla{
+            position: relative;
+            width:100%;
+            height:100%;
+            background-color: darkgreen;
+        }
+
+        #scan, #bisel{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            pointer-events: none;
+        
+        }
+
+        #scan{
+            opacity: 50%:
+
+
+        }
+        .noselect {
+            -webkit-touch-callout: none; 
+            -webkit-user-select: none; 
+            -khtml-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+            user-select: none; 
+                                  
+}
+
+        #contenido{
+            font-family: VT323;
+            padding: 120px;
+            color:rgb(173, 237, 13);
+            font-size: 40px;
+            text-shadow: 1px 2px 2px rgb(119, 164, 29), 0 0 1em yellowgreen, 0 0 0.2em yellowgreen;
+
+
+        }
+        
+       
+
+
+        
+    </style>
+    <body>
+        
+        <div id="pantalla">
+            <img src="scanlines.png" id="scan" class="noselect" />
+            <img src="bezel.png" id="bisel" class="noselect" />
+            <div id="contenido">
+               
+               
+               <p>>Im 22 y/o and im currently studying computer science at 'Tec de Monterrey' </p>
+               
+              
+
+                
+              
+               
+               
+            </div>
+        </div>
+    </body>
+</html>

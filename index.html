@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <!--JQuery-->
+        <script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <!--Fuente-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <script>
+            $(document).ready(function(){
+                $("#boton").click(function(){
+                    $("#parrafo").html('This page is part of a mini-challenge from my <b>web development</b> class.');   
+                });
+            });
+        </script>
+    </head>
+    <style>
+        #pantalla{
+            position: relative;
+            width:100%;
+            height:100%;
+            background-color: darkgreen;
+        }
+
+        #scan, #bisel{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            pointer-events: none;
+        
+        }
+
+        #scan{
+            opacity: 50%:
+
+
+        }
+        .noselect {
+            -webkit-touch-callout: none; 
+            -webkit-user-select: none; 
+            -khtml-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+            user-select: none; 
+                                  
+}
+
+        #contenido{
+            font-family: VT323;
+            padding: 120px;
+            color:rgb(173, 237, 13);
+            font-size: 40px;
+            text-shadow: 1px 2px 2px rgb(119, 164, 29), 0 0 1em yellowgreen, 0 0 0.2em yellowgreen;
+
+
+        }
+        
+        #abajo{
+            position:absolute;
+            bottom:0;
+            right:0;
+            font-family: VT323;
+            padding: 80px;
+            color:rgb(125, 170, 12);
+            font-size: 20px;
+            text-shadow: 1px 2px 2px rgb(119, 164, 29), 0 0 1em yellowgreen, 0 0 0.2em yellowgreen;
+        }
+
+        #boton{
+            font-family: VT323;
+            border-color:green;
+            color: rgb(173, 237, 13);
+            text-shadow: 1px 2px 2px rgb(119, 164, 29), 0 0 1em yellowgreen, 0 0 0.2em yellowgreen;
+            background-color: darkgreen;
+            padding: 20px;
+            
+        }
+        #boton:hover{
+            padding: 20px;
+            background: yellow;
+            color:greenyellow;
+            
+        }
+        #boton:active{
+            padding:20px;
+            background:darkgreen;
+            color:yellow;
+        }
+
+        #boton2{
+            font-family: VT323;
+            border-color:green;
+            color: rgb(173, 237, 13);
+            text-shadow: 1px 2px 2px rgb(119, 164, 29), 0 0 1em yellowgreen, 0 0 0.2em yellowgreen;
+            background-color: darkgreen;
+            padding: 20px;
+            
+        }
+        #boton2:hover{
+            padding: 20px;
+            background: yellow;
+            color:greenyellow;
+            
+        }
+        #boton2:active{
+            padding:20px;
+            background:darkgreen;
+            color:yellow;
+        }
+
+        #icono{  
+            padding: 20px;
+
+        }
+
+        
+    </style>
+    <body>
+        
+        <div id="pantalla">
+            <img src="scanlines.png" id="scan" class="noselect" />
+            <img src="bezel.png" id="bisel" class="noselect" />
+            <div id="contenido">
+               <h1>HELLO, WORLD! </h1>
+                <!--Icono Bootstrap-->
+                <div id="icono">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-emoji-dizzy" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M9.146 5.146a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zm-5 0a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 1 1 .708.708l-.647.646.647.646a.5.5 0 1 1-.708.708L5.5 7.207l-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zM10 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                      </svg>
+    
+                   </div>
+               <p id="parrafo">This is my proyect!</p>
+                <p id="abajo"> By: Gonzalo Calderon | A01740008 | Tec de Monterrey</p>
+               <button id="boton">(Click here for more info)</button>
+               <button id="boton2">(About me)</button>
+               <div id="response">
+
+               </div>
+
+               <script>
+                    function ajax(){
+                        const http = new XMLHttpRequest();
+                        const url = 'http://localhost:8080/info.html';
+
+                        http.onreadystatechange = function(){
+                            if(this.readystate == 4 && this.status == 200){
+                                document.getElementById("respone").innerHTML = this.responseText;
+                            }
+                        }
+
+                        http.open("GET", url);
+                        http.send();
+                    }
+                    document.getElementById("boton2").addEventListener("click", function(){
+                        ajax();
+
+                    });
+               </script>
+
+                
+              
+               
+               
+            </div>
+        </div>
+    </body>
+</html>
